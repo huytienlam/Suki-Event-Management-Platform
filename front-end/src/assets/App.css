@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Montserrat;
+}
+body {
+  width: 100%;
+  box-sizing: border-box;
+  background-color: #f0f2f5;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}

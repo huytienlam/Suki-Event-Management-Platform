@@ -1,0 +1,499 @@
+/* ErrorModal.css */
+.login-page__modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.login-page__modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  z-index: 100;
+  color: black;
+}
+
+.login-page__modal-content button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: rgb(255, 115, 131);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-page__modal-content button:hover {
+  background-color: rgb(238, 52, 73);
+}
+
+/* Login Page Styles */
+
+.login-page__login__container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  align-content: center;
+  background-color: rgb(45, 21, 143);
+}
+
+.login-page__login-form {
+  --formWidth: 400px;
+  --formHeight: auto;
+  --borderRad: 30px;
+  --fontSize: 16px;
+  margin: auto;
+  width: var(--formWidth);
+  height: var(--formHeight);
+  background: rgba(125, 122, 135, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--borderRad);
+  position: relative;
+  padding: 20px 0;
+  z-index: 10;
+}
+
+.login-page__login-form .login-page__title {
+  font-weight: bolder;
+  text-align: center;
+  font-size: 40px;
+  height: auto;
+  margin-bottom: 20px;
+  padding-top: 20px;
+  color: white;
+}
+
+.login-page__login-form input[type="text"],
+.login-page__login-form input[type="password"] {
+  padding: 10px 20px;
+  height: 50px;
+  font-size: var(--fontSize);
+  border-radius: var(--borderRad);
+  border: 0;
+  outline: 0;
+  margin: 5px 0;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+  box-sizing: border-box;
+}
+
+.login-page__login-form input[type="text"]::placeholder,
+.login-page__login-form input[type="password"]::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+span[id="input-format"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page__login-form .login-page__remember-me-container {
+  font-size: var(--fontSize);
+  width: 50%;
+  color: white;
+}
+
+.login-page__remember-me-forgot {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+  height: 50px;
+}
+
+.login-page__remember-me-container {
+  width: 50%;
+  margin-right: auto;
+}
+
+.login-page__remember-me-forgot label span {
+  vertical-align: middle;
+}
+
+.login-page__remember-me-forgot a {
+  margin-left: auto;
+}
+
+.login-page__remember-me-container input {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.login-page__forgot-password-container button {
+  color: white;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: inherit;
+}
+
+input[type="checkbox"] {
+  clip: rect(0, 0, 0, 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.login-page__checkbox {
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  margin-right: 5px;
+}
+
+.login-page__checked--active {
+  background-color: rgb(199, 33, 199);
+}
+
+.login-page__login-form .login-page__login-button {
+  color: white;
+  font-size: 20px;
+  width: 90%;
+  height: 50px;
+  background: rgba(255, 115, 131, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgb(174, 173, 173);
+  outline: 0;
+  border-radius: var(--borderRad);
+  font-weight: 600;
+  /* WebKit-specific transition for background */
+  -webkit-transition: background 0.5s ease;
+
+  /* Standard transition property */
+  transition: background 0.5s ease;
+}
+
+.login-page__login-form .login-page__login-button:hover {
+  cursor: pointer;
+  background: rgba(255, 115, 131, 1);
+}
+
+.login-page__login-form .login-page__login-button:active {
+  background: rgba(226, 77, 94, 1);
+}
+
+.login-page__dont-have-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 20px;
+  margin-top: 20px;
+  color: white;
+}
+
+.login-page__dont-have-account a {
+  margin-left: 5px;
+  color: white;
+}
+
+/* Abstract Shapes */
+
+/* Animations */
+@keyframes expand {
+  0% {
+    height: calc(var(--radius) * 0.8);
+    width: calc(var(--radius) * 0.8);
+  }
+  50% {
+    height: var(--radius);
+    width: var(--radius);
+  }
+  100% {
+    height: calc(var(--radius) * 0.8);
+    width: calc(var(--radius) * 0.8);
+  }
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes horizontal-bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.2);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+.login-page__ring-1 {
+  position: absolute;
+  top: -200px;
+  left: -150px;
+  max-width: 500px;
+  z-index: 5;
+  animation: clockwise 3s linear infinite;
+}
+
+.login-page__polyline-1 {
+  position: absolute;
+  bottom: -30px;
+  right: -50px;
+  max-width: 500px;
+  z-index: 5;
+  animation: bounce 8s ease infinite;
+}
+
+.login-page__polygon-1 {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  max-width: 300px;
+  z-index: 5;
+  animation: horizontal-bounce 9s ease infinite;
+}
+
+.login-page__ellipse-2 {
+  position: absolute;
+  bottom: 80px;
+  left: 150px;
+  max-width: 170px;
+  z-index: 5;
+  animation: bounce 7s ease infinite;
+}
+
+.login-page__login-abstract-container {
+  overflow: hidden;
+}
+
+.login-page__login-abstract-container .login-page__layer-1 {
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: rgb(45, 21, 143);
+  box-shadow: inset -3px -3px 8px #202020, inset 1px 1px 10px #ffffff;
+}
+
+.login-page__login-abstract-container .login-page__layer-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 0;
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, rgb(143, 1, 252), rgb(179, 53, 255));
+  margin-left: 500px;
+  margin-top: -300px;
+  box-shadow: 3px 3px 8px #202020, -3px -3px 20px #ffffff;
+}
+
+.login-page__login-abstract-container .login-page__layer-0 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: -200;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: rgb(143, 1, 252);
+  border-radius: 50%;
+  filter: blur(10px);
+}
+
+/* Forgot Password Styles */
+.forgot-password__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(45, 21, 143);
+}
+
+.forgot-password__form {
+  padding: 30px;
+  border-radius: 15px;
+  width: 350px;
+  text-align: center;
+  background: rgba(125, 122, 135, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  position: relative;
+  z-index: 100;
+}
+
+.forgot-password__form h2 {
+  color: white;
+  font-size: 35px;
+  margin-bottom: 10px;
+}
+
+.forgot-password__form input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: 17px;
+}
+
+.forgot-password__form input::placeholder {
+  color: white;
+}
+
+.forgot-password__form input:focus {
+  outline: none;
+}
+
+.forgot-password__form button {
+  width: 100%;
+  padding: 15px 20px;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 17px;
+  /* WebKit-specific transition for background */
+  -webkit-transition: background 0.5s ease;
+
+  /* Standard transition property */
+  transition: background 0.5s ease;
+
+  font-weight: 600;
+}
+
+.forgot-password__blue-button {
+  background-color: rgba(255, 115, 131, 0.7);
+}
+
+.forgot-password__pink-button {
+  background-color: rgba(38, 38, 38, 0.7);
+}
+
+.forgot-password__form button:hover {
+  background-color: rgb(255, 115, 131);
+}
+
+.forgot-password__form button:active {
+  background-color: rgb(216, 53, 72);
+}
+
+.forgot-password__message {
+  margin: 10px 0;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+}
+.login-signup__back-to-guest {
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-weight: 700;
+  transition: 0.3s color;
+  z-index: 999;
+}
+
+.login-signup__back-to-guest span {
+  font-size: 25px;
+}
+
+.login-signup__back-to-guest:hover {
+  color: #de4e5f;
+}
+
+.login-signup__back-to-guest:active {
+  color: #ffffff;
+}

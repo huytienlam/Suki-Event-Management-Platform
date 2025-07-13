@@ -1,0 +1,334 @@
+/* Make sure the navbar is properly styled */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+  height: 80px;
+  padding: 0 20px 0 30px;
+  gap: 20px;
+}
+
+.navbar-left {
+  width: 25%;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+}
+
+.navbar-left .logo {
+  width: 50px;
+}
+
+.navbar-left span {
+  color: white;
+  font-weight: 800;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 10px;
+  flex: 1;
+  display: flex;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  width: 25.75%;
+}
+
+.navbar-right ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-right ul li {
+  display: inline-block;
+  list-style: none;
+  margin: 0 10px; /* Adjust margin as needed */
+}
+
+.navbar-right .profile_img img {
+  display: block;
+  align-items: center;
+  margin-right: 20px;
+  margin-left: 20px;
+  border: 2px solid white;
+}
+
+.profile_img img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.navbar-center {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar-center .search-box {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+
+  /*Glass effect*/
+  background: rgba(255, 255, 255, 0.115);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, 0.3);
+  border-radius: 30px;
+}
+
+.navbar-center .search-box input {
+  width: 100%;
+  background: transparent;
+  padding: 8px;
+  outline: none;
+  border: 0;
+  color: white;
+}
+.navbar-center .search-box input::placeholder {
+  color: white;
+}
+/*Right section*/
+.navbar-right .profile_img {
+  position: relative;
+}
+
+/*Notification and Ticket dropdown*/
+/*Notification dropdown*/
+
+.navbar-right .notification-dropdown {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 170px;
+  background-color: rgba(45, 21, 143, 0.8);
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.navbar-right .notification-dropdown.active {
+  display: block;
+  position: absolute;
+}
+
+.navbar-right .notification-card {
+  padding: 10px;
+  width: 500px;
+  max-height: 400px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.navbar-right .notification-card::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+.navbar-right .notification-card::-webkit-scrollbar-thumb {
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.navbar-right .notification-card::-webkit-scrollbar-thumb:hover {
+  background: grey; /* Color when hovering over the scrollbar thumb */
+}
+
+.navbar-right .notification-card::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 4px; /* Rounded corners for the scrollbar track */
+}
+
+.nav-bar__card-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.nav-bar__card-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: left;
+  gap: 20px;
+}
+
+.nav-bar__card-list-part {
+  display: flex;
+  align-items: center;
+}
+
+.nav-bar__card-list-part-purple {
+  width: 15px;
+  height: 15px;
+  background-color: #2d158f;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.nav-bar__card-list-part-pink {
+  width: 15px;
+  height: 15px;
+  background-color: #ff7383;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.nav-bar__card-list-part-white {
+  width: 15px;
+  height: 15px;
+  background-color: white;
+  border-radius: 20px;
+  margin-right: 20px;
+}
+
+.nav-bar__card-list-part-info {
+  flex: 1;
+}
+
+.nav-bar__card-list-part-info-main {
+  font-size: 18px;
+}
+
+.nav-bar__card-list-part-info-events {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nav-bar__card-list-part-info-time {
+  font-size: 15px;
+}
+
+.nav-bar__card-list-part-info-participation {
+  font-size: 15px;
+}
+
+/*================*/
+/*Ticket dropdown*/
+
+.navbar-right .ticket-dropdown {
+  display: none;
+  position: absolute;
+  top: 80px;
+  right: 110px;
+  background-color: rgba(45, 21, 143, 0.8);
+  color: white;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.navbar-right .ticket-dropdown.active {
+  display: block;
+  position: absolute;
+}
+
+.navbar-right .ticket-card {
+  padding: 10px;
+  width: 500px;
+  max-height: 400px;
+  position: relative;
+  overflow-y: auto;
+}
+
+.navbar-right .ticket-card p {
+  margin: 0;
+}
+.navbar-right .ticket-card::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+.navbar-right .ticket-card::-webkit-scrollbar-thumb {
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+  border-radius: 4px; /* Rounded corners for the scrollbar thumb */
+}
+
+.navbar-right .ticket-card::-webkit-scrollbar-thumb:hover {
+  background: grey; /* Color when hovering over the scrollbar thumb */
+}
+
+.navbar-right .ticket-card::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background of the scrollbar track */
+  border-radius: 4px; /* Rounded corners for the scrollbar track */
+}
+
+.dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 60px; /* Adjust based on your navbar height */
+  right: 0;
+  background-color: #333; /* Adjust background color */
+  color: white; /* Adjust text color */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 200;
+  width: 250px; /* Adjust width */
+}
+
+.dropdown-menu.active {
+  display: block;
+}
+
+.dropdown-menu .profile-section {
+  padding: 15px;
+  border-bottom: 1px solid #444; /* Divider */
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-menu .profile-section img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.dropdown-menu .profile-section .profile-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-menu .profile-section .profile-info p {
+  margin: 0;
+}
+
+.dropdown-menu .profile-section .see-all-profiles {
+  color: #0a84ff;
+  margin-top: 5px;
+}
+
+.dropdown-menu .menu-item {
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.dropdown-menu .menu-item:hover {
+  background-color: #444; /* Hover effect */
+}
+
+.dropdown-menu .menu-item .icon {
+  margin-right: 10px;
+}

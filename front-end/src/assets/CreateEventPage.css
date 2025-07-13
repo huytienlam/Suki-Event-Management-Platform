@@ -1,0 +1,634 @@
+.create-event__container{
+  width: 100%;
+  height: 100%;
+  background-color: #2d158f;
+  align-content:center;
+  position: relative;
+  overflow: hidden;
+}
+
+.create-event__form{
+  box-sizing: border-box;
+  --width: 1000px;
+  --height: auto;
+  margin: auto;
+  width: var(--width);
+  height: var(--height);
+  --borderRad: 20px;
+  --fontSize: 20px;
+  border-radius: var(--borderRad);
+  /*Glass Effect*/
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+  padding: 10px 20px;
+  margin-top: 100px;
+  margin-bottom:100px;
+  position: relative;
+  z-index: 10;
+}
+
+@media only screen and (max-width: 768px) {
+  .create-event__form {
+      --width: 90%; /* Adjust width for smaller screens */
+  }
+}
+
+.create-event__form .create-event__header-bar{
+
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-event__form div:nth-child(1){
+  margin-right:auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-event__form div:nth-child(1) p{
+  width:150px;
+  font-size: var(--fontSize);
+  margin-left: 10px;
+
+}
+
+.create-event__header-bar p, .create-event__header-bar span{
+  color:white;
+
+}
+
+.create-event__form div:nth-child(1) p span{
+  font-weight: 700;
+  font-size: var(--fontSize);
+}
+
+.create-event__form div:nth-child(2){
+  margin-left:auto;
+}
+
+.create-event__form .create-event__profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  /* Glass Effect */
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.create-event__form .create-event__profile-container img {
+  width: 100%; /* Make sure the image covers the full width of the container */
+  height: 100%; /* Make sure the image covers the full height of the container */
+  object-fit: cover; /* Ensures the image fully covers the container */
+}
+
+.create-event__form .create-event__logo-container{
+  --logoSize: 100px;
+  width:var(--logoSize);
+  height: var(--logoSize);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-event__form .create-event__logo-container img{
+  width: 90%;
+  object-fit: contain;
+  background-size: cover;
+}
+
+.create-event__form .create-event__event-properties{
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+}
+
+.create-event__form input[type = "text"],
+.create-event__form input[type = "number"],
+.create-event__form input[type = "date"],
+.create-event__form input[type = "time"]
+{
+  padding: 10px 20px;
+  min-height: 50px;
+  font-size: var(--fontSize);
+  border-radius:25px;
+  border: 0;
+  outline: 0;
+  margin-bottom: 10px;
+  color:white;
+  /*Glass efffect*/
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  box-sizing: border-box ;
+}
+
+#event-name{
+  width: 100%;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*Description*/
+.create-event__description-container,
+.create-event__rules-container,
+.create-event__location-container,
+.create-event__participant-container,
+.create-event__date-n-time-container,
+.create-event__ticket-container,
+.create-event__logo-container,
+.create-event__category-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin: 10px 0px;
+}
+
+.create-event__description-container label,
+.create-event__rules-container label,
+.create-event__location-container label,
+.create-event__participant-container label,
+.create-event__category-container label,
+.create-event__date-n-time-container label,
+.create-event__ticket-container label
+{
+  margin-right:auto;
+  width: 200px;
+  font-weight: bold;
+  color: white;
+}
+
+.create-event__date-n-time-container p,
+.create-event__ticket-container p{
+  width:200px;
+  color:white;
+  font-weight:bold;
+  margin-right:auto;
+}
+
+.create-event__date-n-time-container div,
+.create-event__ticket-container div{
+  display: flex;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-event__date-n-time-container div input{
+  width: 50%;
+}
+
+.create-event__date-n-time-container div input:nth-child(1){
+  margin-right: 5px;
+}
+
+.create-event__date-n-time-container div input:nth-child(2){
+  margin-left: 5px;
+}
+
+.create-event__ticket-container div input:nth-child(1){
+  margin-right: 10px;
+} 
+
+.create-event__ticket-container div select{
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.create-event__logo-container .img-container{
+  border: 1px solid white;
+  --eventWidth: 100%;
+  --eventHeight: auto;
+  width:var(--eventWidth);
+  height: var(--eventHeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+.create-event__logo-container .img-container img{
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.create-event__ticket-container div select,
+.create-event__ticket-container div input{
+  width: 35%;
+}
+
+.create-event__ticket-container div select{
+  padding: 13px 20px;
+}
+
+.create-event__description-container textarea,
+.create-event__rules-container textarea,
+.create-event__location-container input,
+.create-event__participant-container input,
+.create-event__ticket-container select
+{
+  margin-right: auto;
+  color:white;
+  resize:none;
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  outline:0;
+  border:0;
+  width: 85%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: var(--fontSize);
+}
+
+.create-event__category-container select{
+  margin-right: auto;
+  color:white;
+  resize:none;
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  outline:0;
+  border:0;
+  width: 90%;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: var(--fontSize);
+  margin: 5px 0px;
+  appearance: none;
+  background: url('https://img.icons8.com/?size=100&id=85502&format=png&color=FFFFFF') no-repeat left center ;
+  
+  background-size: 16px; /* Adjust arrow size */
+  background-position: 97% center; /* Adjust arrow position */
+}
+
+.create-event__date-n-time-container input {
+  color: white;
+}
+
+.create-event__date-n-time-container::placeholder input {
+  color: white;
+}
+
+.create-event__location-container input,
+.create-event__participant-container input{
+  width: 90%;
+}
+
+.create-event__description-container textarea{
+  height: 200px;
+}
+
+.create-event__form textarea::-webkit-scrollbar {
+  display: none;
+}
+
+.create-event__rules-container textarea{
+  height: 100px;
+}
+
+.create-event__description-container textarea::placeholder,
+.create-event__rules-container textarea::placeholder
+{
+  color:white;
+}
+
+.create-event__ticket-container select{
+  border:0;
+  outline: 0;
+  color:white;
+  /*Glass*/
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  appearance: none;
+  background: url('https://img.icons8.com/?size=100&id=85502&format=png&color=FFFFFF') no-repeat left center ;
+  background-size: 16px; /* Adjust arrow size */
+  background-position: 90% center; /* Adjust arrow position */
+}
+
+.create-event__ticket-container option,
+.create-event__category-container option{
+  border:0;
+  outline: 0;
+  color:white;
+  /*Glass*/
+  background-color: #6252a2;
+  font-size: 20px;
+}
+
+::-webkit-datetime-edit{
+  color:white;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(100%);
+}
+
+.create-event__form input[type = "text"]::placeholder,
+.create-event__form input[type = "number"]::placeholder{
+  color:white;
+}
+
+.create-event__logo{
+  width:100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+  height: 200px;
+  /* margin:5px 0px;
+  padding-bottom: 10px; */
+  gap:10px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.create-event__logo .img-container{
+  border: 1px solid white;
+
+  --eventWidth: 80%;
+  --eventHeight: 100%;
+  width:var(--eventWidth);
+  height: var(--eventHeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.create-event__upload-delete-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:10px;
+  box-sizing: border-box;
+  width: 30%;
+}
+
+.create-event__upload-delete-container .upload,
+.create-event__upload-delete-container .delete{
+  border-radius: 0;
+  outline:0;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: calc(var(--fontSize) + 5px);
+  color:white;
+  width: 100%;
+  height:50%;
+  font-weight: 600;
+}
+
+.create-event__submit-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0px;
+  gap: 20px
+}
+
+.create-event__form .create-event__button{
+  border-radius: 0;
+  outline:0;
+  border: 1px solid white;
+  background: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width:100%;
+  height: 100px;
+  transition: 0.7 ease-in-out;
+  color:white;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.create-event__form .create-event__button:hover{
+  opacity: 0.7;
+}
+
+.create-event__form .create-event__button:active{
+  opacity:1;
+}
+
+.create-event__form .back-to-home__button{
+  border-radius: 0;
+  outline:0;
+  border: 1px solid white;
+  background: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width:100%;
+  height: 100px;
+  transition: 0.7 ease-in-out;
+  color:white;
+  font-size: 25px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.create-event__form .back-to-home__button:hover{
+  opacity: 0.7;
+}
+
+.create-event__form .back-to-home__button:active{
+  opacity:1;
+}
+
+
+/*Abstract Object*/
+.create-event__abstract-container{
+  width: 100%;
+  height: auto;
+}
+
+.create-event__bottom-right-gradient {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle at center, rgba(255, 115, 131, 0.8), rgba(120, 91, 237, 0.5));
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 2;
+  right: -300px;
+  bottom: -300px;
+}
+
+.create-event__top-left-gradient {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle at center, rgba(255, 115, 131, 0.8), rgba(120, 91, 237, 0.5));
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 2;
+  top: -300px;
+  left: -300px;
+}
+
+@keyframes clockwise {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes horizontal-bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.create-event__polyline-1 {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  max-width: 500px;
+  z-index: 5;
+  animation: horizontal-bounce 5s ease infinite;
+}
+
+.create-event__ellipse-1 {
+  position: absolute;
+  bottom: 400px;
+  right: 100px;
+  max-width: 250px;
+  z-index: 5;
+  animation: bounce 3s linear infinite;
+}
+
+.create-event__polygon-1 {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  max-width: 300px;
+  z-index: 5;
+  animation: anticlockwise 5s linear infinite;
+}
+
+.create-event__ring-1 {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  max-width: 500px;
+  z-index: 5;
+  animation: clockwise 7s ease infinite;
+}
+
+.create-event__date-n-time-container input[type="date"],
+.create-event__date-n-time-container input[type="time"] {
+  color: white; /* Ensure text inside the input is white */
+  background-color: rgba(105, 102, 102, 0.2); /* Match the glass effect background */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Adjust padding if needed */
+  font-size: var(--fontSize); /* Apply the font size */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  appearance: none; /* Remove default arrow styles */
+}
+
+input[type="date"]::-webkit-datetime-edit,
+input[type="time"]::-webkit-datetime-edit {
+  color: white; /* Force the text color to be white */
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
+  filter: invert(100%) brightness(100%); /* Ensure the calendar icon is visible on dark backgrounds */
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-inner-spin-button {
+  filter: invert(100%) brightness(100%); /* Ensure the spinner buttons are visible */
+}
+
+input[type="date"]::-webkit-clear-button,
+input[type="time"]::-webkit-clear-button {
+  filter: invert(100%) brightness(100%); /* Ensure the clear button is visible */
+}

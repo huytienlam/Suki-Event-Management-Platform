@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap");
+
+/* body {
+    background-color: #f8fafc;
+    height:100% ;
+    
+} */
+
+.settingpage-container {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin: 0px 120px;
+  gap: 40px;
+  height: 100vh;
+}
+
+.settingpage-profile {
+  flex: 1;
+  margin-right: 10px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 15px;
+  height: max-content;
+  margin: auto;
+  height: 80%;
+  margin-top: 115px;
+}
+
+.settingpage-profile-header {
+  display: flex;
+  align-items: center; /* Đảm bảo rằng các phần tử bên trong được căn giữa theo chiều dọc */
+  margin-left: 15px;
+}
+
+.settingpage-profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: 10px;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+.settingpage-profile-image-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.settingpage-hovered .settingpage-profile-img {
+  opacity: 0.5;
+}
+
+.settingpage-edit-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.settingpage-edit-icon {
+  font-size: 1.5em;
+}
+
+.settingpage-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.settingpage-popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  position: relative;
+}
+
+.settingpage-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.settingpage-avatar-preview {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed #ccc;
+  padding: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.settingpage-avatar-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.settingpage-save-button,
+.settingpage-cancel-button {
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.settingpage-avatar-preview {
+  margin-bottom: 20px;
+}
+
+.settingpage-profile-text-container {
+  line-height: 1.2; /* Tăng line-height để đảm bảo khoảng cách hợp lý */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Căn giữa văn bản theo chiều dọc */
+}
+
+.settingpage-profile-title {
+  font-size: 20px;
+  margin: 0; /* Xóa margin để đảm bảo không có khoảng cách dư thừa */
+}
+
+.settingpage-profile-email {
+  font-size: 14px;
+  margin: 0; /* Xóa margin để đảm bảo không có khoảng cách dư thừa */
+}
+
+.settingpage-menu {
+  margin: 0 20px;
+}
+
+.settingpage-menu-link {
+  display: block;
+  color: #4c535d;
+  font-weight: 600;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s;
+}
+
+.settingpage-menu-link::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #f1f5f9;
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.settingpage-menu-link:hover:not(.settingpage-active)::before {
+  left: 0;
+}
+
+.settingpage-menu-link:hover:not(.settingpage-active) {
+  color: #1e293b;
+
+  cursor: pointer;
+}
+.settingpage-menu-icon {
+  margin-right: 10px;
+}
+
+.settingpage-menu-link.settingpage-active {
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+}
+
+.settingpage-account {
+  flex: 2;
+  margin-left: 10px;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  border-radius: 5px;
+  height: max-content;
+  margin: auto;
+  height: 80%;
+  margin-top: 115px;
+}
+
+.settingpage-account-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #768499;
+}
+
+.settingpage-account-title {
+  font-size: 25px;
+  color: #1e293b;
+  font-weight: 600;
+  margin-left: 10px;
+  padding: 10px 0;
+}
+
+.settingpage-btn-container {
+  margin-right: 5px;
+}
+
+.settingpage-btn-cancel {
+  width: 8em;
+  height: 3em;
+  cursor: pointer;
+  border: 1px solid #768499;
+  border-radius: 2em;
+  color: #1e293b;
+  font-weight: bold;
+  margin-right: 5px;
+  background-color: #fff;
+  transition-duration: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.settingpage-btn-cancel:hover {
+  background-color: #f1f5f9;
+}
+
+.settingpage-btn-save {
+  position: relative;
+  width: 8em;
+  height: 3em;
+  cursor: pointer;
+  border: 1px solid #458ff6;
+  border-radius: 2em;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+  background-color: #2d158f; /* Base background color */
+  overflow: hidden; /* Ensure the overlay stays within the button */
+  transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
+
+.settingpage-btn-save::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off the screen to the left */
+  width: 100%;
+  height: 100%;
+  /* background-color: #ff7383;  */
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+  transition: left 0.3s ease-in-out; /* Smooth transition for the overlay movement */
+  z-index: 1; /* Place the overlay above the base background */
+}
+
+.settingpage-btn-save:hover::after {
+  left: 0;
+}
+.settingpage-btn-save span {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+.settingpage-account-edit {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0 15px 0;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.settingpage-input-container {
+  width: 96.5%;
+  display: flex;
+  flex-direction: column;
+  margin-right: 30px;
+  margin-left: 15px;
+}
+
+.settingpage-input-container label {
+  color: #768499;
+  font-size: 14px;
+}
+
+.settingpage-input-container input {
+  height: 25px;
+  border: 1.5px solid #768499;
+  border-radius: 5px;
+  padding: 5px;
+  color: #768499;
+  width: 100%;
+}
+
+.settingpage-input-container input:focus {
+  outline: none;
+  border: 1.5px solid #2d158f;
+}
+
+.settingpage-input-container select {
+  height: 36px; /* Match the input's height */
+  border: 1.5px solid #768499;
+  border-radius: 5px;
+  padding: 5px;
+  color: #768499;
+  width: 100%;
+  box-sizing: border-box; /* Ensure padding is included in the height */
+  -webkit-appearance: none; /* Remove default styling on WebKit browsers */
+  -moz-appearance: none; /* Remove default styling on Firefox */
+  appearance: none; /* Remove default styling on all browsers */
+}
+
+.settingpage-input-container select:focus {
+  outline: none;
+  border: 1.5px solid #2d158f;
+}
+
+.settingpage-input-container textarea {
+  display: block;
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1.5px solid #768499;
+  border-radius: 5px;
+  color: #768499;
+  resize: none;
+}
+
+.settingpage-input-container textarea:focus {
+  outline: none;
+  border: 1.5px solid #2d158f;
+}
+
+.react-datepicker__input-container {
+  flex: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .settingpage-container {
+    flex-direction: column;
+  }
+
+  .settingpage-profile {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
+
+  .settingpage-account {
+    margin: 0;
+  }
+}
+
+.settingpage-logout-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.settingpage-account-question {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.settingpage-account-button {
+  position: relative;
+  width: 8em;
+  height: 3em;
+  cursor: pointer;
+  border: 1px solid #458ff6;
+  border-radius: 2em;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+  background-color: #ff7383; /* Base background color */
+  overflow: hidden; /* Ensure the overlay stays within the button */
+  transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
+
+.settingpage-account-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off the screen to the left */
+  width: 100%;
+  height: 100%;
+  /* background-color: #ff7383;  */
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+  transition: left 0.3s ease-in-out; /* Smooth transition for the overlay movement */
+  z-index: 1; /* Place the overlay above the base background */
+}
+
+.settingpage-account-button:hover::after {
+  left: 0;
+}
+.settingpage-account-button span {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+.settingpage-setting-content {
+  padding: 20px;
+}
+
+.settingpage-setting-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.settingpage-setting-label {
+  font-size: 16px;
+  color: #475569;
+}
+
+.settingpage-button {
+  position: relative;
+  width: 8em;
+  height: 3em;
+  cursor: pointer;
+  border: 1px solid #458ff6;
+  border-radius: 2em;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 5px;
+  background-color: #2d158f; /* Base background color */
+  overflow: hidden; /* Ensure the overlay stays within the button */
+  transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
+
+.settingpage-button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off the screen to the left */
+  width: 100%;
+  height: 100%;
+  /* background-color: #ff7383;  */
+  background: linear-gradient(150deg, #2d158f, #ff7383);
+  transition: left 0.3s ease-in-out; /* Smooth transition for the overlay movement */
+  z-index: 1; /* Place the overlay above the base background */
+}
+
+.settingpage-button:hover::after {
+  left: 0;
+}
+.settingpage-button span {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+
+/*Delete button*/
+.settingpage-button.delete {
+  position: relative;
+  width: 8em;
+  height: 3em;
+  cursor: pointer;
+  border: 1px solid red;
+  border-radius: 2em;
+  color: white;
+  font-weight: bold;
+  margin-left: 5px;
+  background-color: #ff7383; /* Base background color */
+  overflow: hidden; /* Ensure the overlay stays within the button */
+  transition: color 0.3s ease-in-out; /* Smooth transition for text color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
+
+.settingpage-button.delete::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%; /* Start off the screen to the left */
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(150deg, red, #ff7383);
+
+  transition: left 0.3s ease-in-out; /* Smooth transition for the overlay movement */
+  z-index: 1; /* Place the overlay above the base background */
+}
+
+.settingpage-button.delete:hover::after {
+  left: 0;
+}
+.settingpage-button.delete span {
+  position: relative;
+  z-index: 2; /* Ensure the text is above the overlay */
+}
+/* .settingpage-button .delete {
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid red; 
+    color: red;
+  } */
+
+.password-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.settingpage-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.settingpage-select {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+.settingpage-notification-content {
+  padding: 20px;
+}
+
+.settingpage-notification-section {
+  margin-bottom: 20px;
+}
+
+.settingpage-notification-section-title {
+  font-size: 18px;
+  color: #475569;
+  margin-bottom: 10px;
+}
+
+.settingpage-notification-item {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.settingpage-notification-item p {
+  font-size: 16px;
+  color: #475569;
+}
+
+/* .settingpage-notification-item input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+  } */
+/* .settingpage-notification-item label{
+  width: 0px;
+} */
+.settingpage-notification-item input[type="checkbox"] {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+}
+.settingpage-notification-item .settingpage__checkbox {
+  display: inline-block;
+  height: 20px;
+  width: 20px;
+  border: 1px solid grey;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  margin-right: 10px;
+  margin-top: 5px;
+  cursor: pointer;
+}
+.settingpage-notification-item .settingpage__checked--active {
+  background-color: rgb(199, 33, 199);
+}
+
+.settingpage-notification-item input[type="checkbox"] {
+  margin-right: 20px; /* Thêm khoảng cách giữa checkbox và label */
+}

@@ -1,0 +1,222 @@
+/* Container */
+.about-us__container {
+  align-content: center;
+  background-color: rgb(42, 19, 134);
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+/* Card */
+.about-us__card-container {
+  width: 100vw;
+  padding: 150px 0 50px 0;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+}
+
+.about-us__card {
+  --formHeight: auto;
+  --borderRad: 20px;
+  --fontSize: 16px;
+  /* Combined margin properties */
+  margin: 0 120px;
+  flex: 1;
+  height: var(--formHeight);
+  background: rgba(63, 31, 189, 0.219); /* Glass effect */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: var(--borderRad);
+  padding: 100px 100px 50px 100px;
+  scale: 1;
+  position: relative;
+  z-index: 6;
+}
+
+.about-us__card .title {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+/* Story and Team Containers */
+.about-us__story-container,
+.about-us__team-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px 0 80px 0;
+  gap: 100px;
+}
+
+/* Logo Container */
+.about-us__logo-container {
+  --logoSize: 300px;
+  width: var(--logoSize);
+  height: var(--logoSize);
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-us__logo-container img {
+  width: var(--logoSize);
+  object-fit: contain;
+}
+
+/* Text Areas */
+.about-us__story-text,
+.about-us__team-text {
+  font-size: 20px;
+  text-align: justify;
+  width: 70%;
+  line-height: 1.6;
+}
+
+.about-us__story-text span,
+.about-us__team-text span {
+  font-weight: 700;
+  display: block;
+  font-size: 35px;
+  margin-bottom: 20px;
+}
+
+.about-us__container .p-1 {
+  margin-bottom: 20px;
+}
+
+/* Team Image Container */
+.about-us__team-img-container {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+}
+
+/* Header and Footer is the same as New Guest Page.css*/
+
+/* Animation */
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes horizontal-bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+}
+
+/* Gradient */
+
+.about-us__abstract-container {
+  overflow: hidden;
+}
+
+.about-us__top-right-gradient {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 115, 131, 0.8),
+    rgba(120, 91, 237, 0.5)
+  );
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 4;
+  right: -200px;
+  top: -300px;
+  animation: pulse 4s ease infinite;
+}
+
+.about-us__middle-gradient {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 115, 131, 0.8),
+    rgba(120, 91, 237, 0.5)
+  );
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 4;
+  left: -250px;
+  top: 25%;
+  animation: pulse 3s ease infinite;
+}
+
+.about-us__bottom-right-gradient {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 115, 131, 0.8),
+    rgba(120, 91, 237, 0.5)
+  );
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 4;
+  right: -300px;
+  bottom: 100px;
+  animation: pulse 5s ease infinite;
+}
+
+/* Abstract */
+
+.about-us__ring-1 {
+  position: absolute;
+  z-index: 5;
+  top: -250px;
+  left: -150px;
+  max-width: 600px;
+  animation: pulse 20s ease infinite;
+}
+
+.about-us__polygon-1 {
+  position: absolute;
+  z-index: 5;
+  bottom: 300px;
+  left: 500px;
+  max-width: 300px;
+  animation: rotate 17s linear infinite;
+}
+
+.about-us__ellipse-1 {
+  position: absolute;
+  z-index: 5;
+  top: 600px;
+  right: -150px;
+  max-width: 300px;
+  animation: horizontal-bounce 4s ease infinite;
+}

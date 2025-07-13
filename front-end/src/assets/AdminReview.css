@@ -1,0 +1,698 @@
+.admin-review__container {
+  height: 100%;
+  background-color: rgb(45, 21, 143);
+  align-content: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+
+.admin-review__form {
+  --width: 1000px;
+  --height: auto;
+  margin: auto;
+
+  width: var(--width);
+  height: var(--height);
+
+  background-color: white;
+  --borderRad: 20px;
+  --fontSize: 20px;
+  border-radius: var(--borderRad);
+  /*Glass Effect*/
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+  padding: 10px 20px;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  position: relative;
+  z-index: 10;
+}
+
+.admin-review__form .admin-review__header-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-review__form div:nth-child(1) {
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.admin-review__form div:nth-child(1) p {
+  width: 150px;
+  font-size: var(--fontSize);
+  margin-left: 10px;
+}
+.admin-review__header-bar p,
+.admin-review__header-bar span {
+  color: white;
+}
+
+.admin-review__form div:nth-child(1) p span {
+  font-weight: 700;
+  font-size: var(--fontSize);
+}
+.admin-review__form div:nth-child(2) {
+  margin-left: auto;
+}
+.admin-review__form .admin-review__profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  --profileSize: 60px;
+  width: var(--profileSize);
+  height: var(--profileSize);
+  /*Glass Effect*/
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50%;
+  overflow: hidden;
+  cursor: pointer;
+}
+.admin-review__form .admin-review__profile-container img {
+  width: 90%;
+
+  object-fit: contain;
+  background-size: cover;
+}
+.admin-review__form .admin-review__logo-container {
+  --logoSize: 100px;
+  width: var(--logoSize);
+  height: var(--logoSize);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.admin-review__form .admin-review__logo-container img {
+  width: 90%;
+  object-fit: contain;
+  background-size: cover;
+}
+
+.admin-review__form .admin-review__event-properties {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: top;
+}
+
+.admin-review__form .data-field,
+.admin-review__comment-container textarea {
+  padding: 10px 20px;
+  width: 85%;
+  font-size: var(--fontSize);
+  border-radius: 30px;
+
+  margin: 5px 0px;
+  color: white;
+  /*Glass efffect*/
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+
+  box-sizing: border-box;
+}
+
+.admin-review__comment-container textarea {
+  resize: none;
+}
+
+#event-name {
+  width: 100%;
+  border-radius: 0px;
+  font-size: 25px;
+  font-weight: 600;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/*Description*/
+.admin-review__description-container,
+.admin-review__rules-container,
+.admin-review__location-container,
+.admin-review__participant-container,
+.admin-review__date-n-time-container,
+.admin-review__ticket-container,
+.admin-review__logo-container,
+.admin-review__category-container,
+.admin-review__comment-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  margin: 10px 0px;
+}
+
+.admin-review__description-container label,
+.admin-review__rules-container label,
+.admin-review__location-container label,
+.admin-review__participant-container label,
+.admin-review__category-container label,
+.admin-review__comment-container label {
+  margin-right: auto;
+  width: 200px;
+  font-weight: bold;
+  color: white;
+}
+
+.admin-review__date-n-time-container p,
+.admin-review__ticket-container p {
+  width: 200px;
+  color: white;
+  font-weight: bold;
+  margin-right: auto;
+}
+.admin-review__date-n-time-container div,
+.admin-review__ticket-container div {
+  display: flex;
+  width: 85%;
+  justify-content: center;
+  align-items: center;
+}
+.admin-review__date-n-time-container div div {
+  width: 50%;
+}
+.admin-review__date-n-time-container div div:nth-child(1) {
+  margin-right: 5px;
+}
+.admin-review__date-n-time-container div div:nth-child(2) {
+  margin-left: 5px;
+}
+.admin-review__ticket-container div div:nth-child(1) {
+  margin-right: 5px;
+}
+.admin-review__ticket-container div div:nth-child(2) {
+  margin-right: 10px;
+  margin-left: 5px;
+}
+
+.admin-review__logo {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  height: 200px;
+  margin: 5px 0px;
+  padding-bottom: 10px;
+  gap: 10px;
+}
+
+.admin-review__upload-delete-container {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin-left: auto;
+  gap: 10px;
+}
+
+.admin-review__upload-delete-container .upload {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  top: -1px;
+}
+.admin-review__upload-delete-container .delete {
+  height: 50%;
+  width: 100%;
+  position: relative;
+  top: 1px;
+}
+
+.admin-review__logo .img-container {
+  border: 1px solid white;
+
+  --eventWidth: 80%;
+  --eventHeight: 100%;
+  width: var(--eventWidth);
+  height: var(--eventHeight);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+  width: 90%;
+}
+
+.admin-review__logo-container .img-container img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.admin-review__ticket-container div div {
+  width: 35%;
+}
+
+.admin-review__comment-container textarea {
+  height: 200px;
+}
+.admin-review__form textarea::-webkit-scrollbar {
+  display: none;
+}
+.admin-review__rules-container textarea {
+  height: 100px;
+}
+
+.admin-review__description-container textarea::placeholder,
+.admin-review__rules-container textarea::placeholder,
+.admin-review__comment-container textarea::placeholder {
+  color: white;
+}
+.admin-review__ticket-container select {
+  border: 0;
+  outline: 0;
+  color: white;
+  /*Glass*/
+  background-color: rgba(105, 102, 102, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+.admin-review__ticket-container option,
+.admin-review__category-container option {
+  border: 0;
+  outline: 0;
+  color: white;
+  /*Glass*/
+  background-color: rgb(74, 73, 73);
+  font-size: 20px;
+}
+
+::-webkit-datetime-edit {
+  color: white;
+}
+
+.admin-review__form input[type="text"]::placeholder,
+.admin-review__form input[type="number"]::placeholder {
+  color: white;
+}
+.admin-review__form button {
+  border-radius: 0;
+  outline: 0;
+  border: 1px solid white;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  font-size: calc(var(--fontSize) + 5px);
+  color: white;
+  width: 60%;
+}
+
+.admin-review__submit-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 10px;
+  width: 100%;
+}
+
+.admin-review__submit-container div {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.admin-review__form .admin-review__approve {
+  background: rgba(255, 0, 0, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100px;
+  font-weight: 600;
+}
+
+.admin-review__form .admin-review__reject {
+  background: rgba(55, 0, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  width: 100%;
+  height: 100px;
+  font-weight: 600;
+}
+
+.admin-review__form .admin-review__return-main {
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  max-width: 500px;
+  width: 500px;
+  height: 100px;
+  font-weight: 600;
+}
+
+.admin-review__form .admin-review__button:hover {
+  opacity: 0.7;
+}
+
+.admin-review__form .admin-review__button:active {
+  opacity: 1;
+}
+
+/*Abstract Object*/
+
+.admin-review__abstract-container .admin-review__gradient-smudge {
+  z-index: 0;
+  position: absolute;
+
+  --radialPos: 600px;
+  --gradientColor: rgb(255, 104, 39);
+  height: var(--radialPos);
+  width: var(--radialPos);
+
+  margin-left: -400px;
+  margin-top: 400px;
+  --radialRad: var(--circleRad);
+  border-radius: 50%;
+
+  filter: blur(50px);
+  background: radial-gradient(
+    circle at center,
+    var(--gradientColor),
+    transparent
+  );
+}
+.admin-review__abstract-container
+  .admin-review__gradient-smudge:nth-last-of-type(1) {
+  z-index: 0;
+  position: absolute;
+
+  --radialPos: 800px;
+
+  height: var(--radialPos);
+  width: var(--radialPos);
+  margin-left: 1000px;
+  margin-top: -300px;
+  --radialRad: var(--circleRad);
+  border-radius: 50%;
+
+  filter: blur(50px);
+
+  background: radial-gradient(
+    circle at center,
+    var(--gradientColor),
+    transparent
+  );
+}
+
+/*Media query*/
+
+/* Mobile phones (up to 600px) */
+@media (max-width: 600px) {
+  .admin-review__form {
+    --width: 100%;
+    padding: 10px;
+  }
+
+  .admin-review__form div:nth-child(1) p {
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .admin-review__form .admin-review__profile-container,
+  .admin-review__form .admin-review__logo-container {
+    --profileSize: 40px;
+    --logoSize: 60px;
+  }
+
+  .admin-review__description-container label,
+  .admin-review__rules-container label,
+  .admin-review__location-container label,
+  .admin-review__participant-container label,
+  .admin-review__category-container label,
+  .admin-review__comment-container label {
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .admin-review__date-n-time-container p,
+  .admin-review__ticket-container p {
+    width: 100px;
+    font-size: 16px;
+  }
+
+  .admin-review__date-n-time-container div div,
+  .admin-review__ticket-container div div {
+    width: 45%;
+  }
+
+  .admin-review__logo {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .admin-review__upload-delete-container {
+    width: 100%;
+    flex-direction: row;
+    margin-left: 0;
+    gap: 10px;
+  }
+
+  .admin-review__form button {
+    width: 100%;
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .admin-review__submit-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .admin-review__form .admin-review__approve,
+  .admin-review__form .admin-review__reject,
+  .admin-review__form .admin-review__return-main {
+    height: 80px;
+  }
+}
+
+/* Tablets (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .admin-review__form {
+    --width: 90%;
+    padding: 20px;
+  }
+
+  .admin-review__form div:nth-child(1) p {
+    width: 120px;
+    font-size: 18px;
+  }
+
+  .admin-review__form .admin-review__profile-container,
+  .admin-review__form .admin-review__logo-container {
+    --profileSize: 50px;
+    --logoSize: 80px;
+  }
+
+  .admin-review__description-container label,
+  .admin-review__rules-container label,
+  .admin-review__location-container label,
+  .admin-review__participant-container label,
+  .admin-review__category-container label,
+  .admin-review__comment-container label {
+    width: 150px;
+    font-size: 18px;
+  }
+
+  .admin-review__date-n-time-container p,
+  .admin-review__ticket-container p {
+    width: 150px;
+    font-size: 18px;
+  }
+
+  .admin-review__date-n-time-container div div,
+  .admin-review__ticket-container div div {
+    width: 40%;
+  }
+
+  .admin-review__logo {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+  }
+  .admin-review__logo .img-container {
+    height: 200px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 5px;
+  }
+
+  .admin-review__upload-delete-container {
+    width: 100%;
+    height: 150px;
+  }
+
+  .admin-review__submit-container {
+    flex-direction: row;
+    gap: 50px;
+    width: 100%;
+  }
+
+  .admin-review__form .admin-review__approve,
+  .admin-review__form .admin-review__reject,
+  .admin-review__form .admin-review__return-main {
+    width: 310px;
+    height: 80px;
+  }
+}
+
+/*Abstract Object*/
+
+.admin-review__abstract-container {
+  width: 100%;
+  height: auto;
+}
+
+.admin-review__bottom-right-gradient {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 115, 131, 0.8),
+    rgba(120, 91, 237, 0.5)
+  );
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 2;
+  right: -300px;
+  bottom: -300px;
+}
+
+.admin-review__top-left-gradient {
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle at center,
+    rgba(255, 115, 131, 0.8),
+    rgba(120, 91, 237, 0.5)
+  );
+  border-radius: 80%;
+  filter: blur(100px);
+  position: absolute;
+  z-index: 2;
+  top: -300px;
+  left: -300px;
+}
+
+@keyframes clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anticlockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes horizontal-bounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.admin-review__polyline-1 {
+  position: absolute;
+  top: 0;
+  right: -50px;
+  max-width: 500px;
+  z-index: 5;
+  animation: horizontal-bounce 5s ease infinite;
+}
+
+.admin-review__ellipse-1 {
+  position: absolute;
+  bottom: 400px;
+  right: 100px;
+  max-width: 250px;
+  z-index: 5;
+  animation: bounce 3s linear infinite;
+}
+
+.admin-review__polygon-1 {
+  position: absolute;
+  top: 350px;
+  left: 50px;
+  max-width: 300px;
+  z-index: 5;
+  animation: anticlockwise 5s linear infinite;
+}
+
+.admin-review__ring-1 {
+  position: absolute;
+  bottom: -150px;
+  left: -150px;
+  max-width: 500px;
+  z-index: 5;
+  animation: clockwise 7s ease infinite;
+}

@@ -1,0 +1,356 @@
+.searchpage__main-container {
+  background-color: #ffffff;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+.searchpage__container {
+  position: relative;
+  padding: 20px 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.searchpage__leftbar {
+  align-self: flex-start;
+  width: 25%;
+  position: fixed;
+  margin-top: 20px;
+  left: 15px;
+  top: 73px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: 82%;
+}
+
+.searchpage__menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.searchpage__menu-item .searchpage__icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.searchpage__menu-item .searchpage__text {
+  font-size: 16px;
+}
+
+.searchpage__menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+.searchpage__rightbar {
+  align-self: flex-start;
+  width: 25%;
+  position: fixed;
+  margin-top: 20px;
+  right: 25px;
+  top: 73px;
+  display: flex;
+  flex-direction: column;
+  height: 85%;
+}
+
+.searchpage__rightbar h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-top: 25px;
+  color: #2d158f;
+}
+
+.searchpage__label {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #373737;
+}
+
+.searchpage__sidebar {
+  background-color: #ffffff;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.searchpage__title {
+  font-size: 25px;
+  font-weight: 700;
+  color: #ff7383;
+  margin-bottom: 20px;
+}
+
+.searchpage__subtitle {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.searchpage__category-list {
+  list-style: none;
+  padding: 0;
+}
+
+.searchpage__category-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #555;
+}
+
+.searchpage__checkbox {
+  display: none;
+}
+
+.searchpage__checkbox + .searchpage__label::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 2px solid #2d158f;
+  margin-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.searchpage__checkbox:checked + .searchpage__label::before {
+  background-color: #2d158f;
+  box-shadow: inset 0 0 0 3px #fff; /* Tạo khoảng cách giữa màu chọn và viền */
+}
+
+.searchpage__filter-section {
+  margin-bottom: 20px;
+}
+
+.searchpage__centerbar {
+  width: 47%;
+  margin-left: 28%;
+  margin-right: 27.5%;
+  margin-top: 73px;
+  background: #fff;
+}
+
+.searchpage__datepicker-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+.searchpage__input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.searchpage__clear-button {
+  padding: 8px 15px;
+  border: 0;
+  background-color: #2d158f;
+  height: 100%;
+  color: white;
+  font-size: 15px;
+}
+
+.searchpage__datepicker-icon {
+  position: absolute;
+  right: 10px;
+  pointer-events: none;
+}
+
+.searchpage__result {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #f0f2f5;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Corrected opacity value */
+}
+
+.searchpage__result-author-img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.searchpage__result-author-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.searchpage__result-content {
+  display: inline-block;
+}
+
+.searchpage__result-content h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1c1e21;
+}
+
+.searchpage__result-content p {
+  margin: 5px 0 0 0;
+  font-size: 14px;
+  color: #1c1e21;
+  line-height: 1.4; /* Corrected line height */
+  white-space: pre-wrap;
+}
+
+.searchpage__no-results {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.searchpage__no-results h2 {
+  color: #ff7383;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.searchpage__no-results p {
+  color: #5e5e5e;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+/* Left Side Bar */
+.searchpage__container .searchpage__left-side {
+  align-self: flex-start;
+  width: 25%;
+  position: fixed;
+  margin-top: 20px;
+  left: 15px;
+  top: 73px;
+  padding: 0 10px;
+  display: flex;
+  flex-direction: column;
+  height: 86%;
+}
+
+.searchpage__menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.searchpage__menu-item .searchpage__icon {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.searchpage__menu-item .searchpage__icon .icon {
+  color: #2d158f;
+}
+
+.searchpage__menu-item .searchpage__text {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #2d158f;
+  font-weight: 700;
+}
+
+.searchpage__menu-item:hover {
+  background-color: #e0e0e0;
+}
+
+.searchpage__menu-gap {
+  height: 100%;
+}
+
+.searchpage__menu-item-create {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+  background-color: #2d158f;
+}
+
+.searchpage__menu-item-create .searchpage__icon {
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.searchpage__menu-item-create .searchpage__icon .icon {
+  color: #ffffff;
+}
+
+.searchpage__menu-item-create .searchpage__text {
+  margin-left: 10px;
+  font-size: 20px;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.searchpage__menu-item-create:hover {
+  background-color: #ff7383;
+}
+
+.searchpage__highlighted {
+  background-color: #ffff99;
+}
+
+.searchpage__create-event {
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Categories of Music and Festival - Purple */
+.searchpage__result-purple {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #2d158f;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Corrected opacity value */
+  color: white;
+}
+
+/* Categories of Music and Festival - Pink */
+.searchpage__result-pink {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #ff7383;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Corrected opacity value */
+  color: white;
+}
